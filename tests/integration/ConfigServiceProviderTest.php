@@ -16,7 +16,7 @@ use Igorw\Silex\ConfigServiceProvider;
  * @author Igor Wiedler <igor@wiedler.ch>
  * @author Jérôme Macias <jerome.macias@gmail.com>
  */
-class ConfigServiceProviderTest extends \PHPUnit_Framework_TestCase
+class ConfigServiceProviderTest extends PHPUnit\Framework\TestCase
 {
     /**
      * @dataProvider provideFilenames
@@ -189,6 +189,7 @@ class ConfigServiceProviderTest extends \PHPUnit_Framework_TestCase
      */
     public function invalidJsonShouldThrowException()
     {
+        $this->expectException(RuntimeException::class);
         $app = new Container();
         $app->register(new ConfigServiceProvider(__DIR__."/Fixtures/broken.json"));
     }
@@ -199,6 +200,7 @@ class ConfigServiceProviderTest extends \PHPUnit_Framework_TestCase
      */
     public function invalidYamlShouldThrowException()
     {
+        $this->expectException(RuntimeException::class);
         $app = new Container();
         $app->register(new ConfigServiceProvider(__DIR__."/Fixtures/broken.yml"));
     }
@@ -209,6 +211,7 @@ class ConfigServiceProviderTest extends \PHPUnit_Framework_TestCase
      */
     public function invalidTomlShouldThrowException()
     {
+        $this->expectException(Exception::class);
         $app = new Container();
         $app->register(new ConfigServiceProvider(__DIR__."/Fixtures/broken.toml"));
     }

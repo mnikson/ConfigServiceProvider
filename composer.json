@@ -14,17 +14,17 @@
         }
     ],
     "require": {
-        "php": ">=5.3.3,<8.0",
+        "php": ">=8.0",
         "pimple/pimple": "~3.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "4.0.*",
-        "symfony/yaml": "~2.2|~3.0",
-        "jamesmoss/toml": "~0.1"
+        "phpunit/phpunit": "9.5.*",
+        "symfony/yaml": "~6.1.4",
+        "jamesmoss/toml": "~1.1.1"
     },
     "suggest": {
-        "symfony/yaml": "~2.2|~3.0",
-        "jamesmoss/toml": "~0.1"
+        "symfony/yaml": "~6.1.4",
+        "jamesmoss/toml": "~1.1.1"
     },
     "autoload": {
         "psr-4": { "Igorw\\Silex\\": "src/Igorw/Silex/" }

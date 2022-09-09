@@ -15,7 +15,7 @@ namespace Igorw\Silex;
  * @author Igor Wiedler <igor@wiedler.ch>
  * @author Jérôme Macias <jerome.macias@gmail.com>
  */
-class GetFileFormatTest extends \PHPUnit_Framework_TestCase
+class ConfigServiceProviderTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @dataProvider provideFilenamesForFormat
